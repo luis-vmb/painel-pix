@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  painel_pix_backend:
+    build:
+      context: ./.install
+    container_name: painel_pix_backend
+    restart: always
+    volumes:
+      - ./backend:/var/www/html
+      - ./env:/etc/env
+    ports:
+      - "8081:80"
+    networks:
+      - rymo-net
+
+networks:
+  rymo-net:
+    driver: bridge

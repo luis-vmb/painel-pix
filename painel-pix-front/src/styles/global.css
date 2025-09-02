@@ -1,0 +1,219 @@
+header {
+    background-color: #1C8ECE;
+    color: white;
+}
+
+.btn-rymo-outline {
+    color: #ffffff;
+    /* Cor do texto azul-ciano */
+    border: 2px solid #ffffff;
+    /* Borda azul-ciano */
+    background-color: transparent;
+    /* Fundo transparente */
+    padding: 5px 16px;
+    /* Espaçamento do botão */
+    font-size: 0.9rem;
+    /* Tamanho da fonte */
+    border-radius: 30px;
+    /* Bordas arredondadas */
+    font-weight: 600;
+    /* Peso da fonte semi-negrito */
+    transition: all 0.3s ease;
+    /* Transição suave */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    letter-spacing: 0.5px;
+    /* Espaçamento entre as letras */
+}
+
+.btn-rymo-outline:hover {
+    background-color: #ffffff;
+    /* Fundo azul-ciano no hover */
+    color: #157cae;
+    /* Texto branco no hover */
+    transform: translateY(-2px) scale(1.03);
+    /* Efeito de elevação */
+    border-color: #ffffff;
+    /* Borda azul-ciano */
+}
+
+.btn-rymo-outline:active {
+    transform: translateY(1px) scale(0.98);
+    /* Efeito de clique (pressionado) */
+    background-color: #157cae;
+    /* Azul mais escuro no estado ativo */
+    color: #fff;
+    /* Texto branco no estado ativo */
+    border-color: #1C8ECE;
+    /* Borda azul-ciano */
+}
+
+.btn-rymo {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    height: 32.5px;
+}
+
+.btn-rymo:hover {
+    background-color: white;
+    color: #1C8ECE;
+    box-shadow: 0 0 0.4rem rgba(15, 119, 224, 0.4);
+    border-color: #1C8ECE;
+    transform: scale(1.02);
+}
+
+.btn-rymo:active {
+    transform: scale(0.98);
+}
+
+.btn-logout {
+    background-color: transparent;
+    color: #1c8ece;
+    border: 1px solid #1c8ece;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #1c8ece;
+    color: white;
+}
+
+/* Botões específicos para modais */
+.btn-rymo-multPag {
+  background-color: #f8f9fa; /* cor clara neutra */
+  border: 2px solid #0f77e0;
+  color: #0f77e0;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px; /* mais arredondado */
+  transition: all 0.25s ease;
+}
+
+.btn-rymo-multPag:hover {
+  background-color: #1C8ECE;
+  border-color: #1C8ECE;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(28, 142, 206, 0.25);
+}
+
+.btn-rymo-multPag:active {
+  transform: translateY(0);
+}
+
+
+/* === Backdrop com blur e opacidade suave === */
+.modal-backdrop.show {
+  opacity: 0.5; /* mais elegante que 0.8 */
+  backdrop-filter: blur(6px);
+}
+
+/* === Animação do modal na abertura === */
+@keyframes modal-pop {
+  0%   { transform: scale(0.98) translateY(6px); opacity: 0; }
+  100% { transform: scale(1) translateY(0);      opacity: 1; }
+}
+.modal.fade .modal-dialog {
+  transition: transform .2s ease, opacity .2s ease;
+  transform: translateY(10px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+  animation: modal-pop .18s ease-out;
+}
+
+/* === Cartão do modal mais premium === */
+.modal-content {
+  border: 1px solid rgba(15, 119, 224, 0.10);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  overflow: hidden; /* garante topo/rodapé arredondados */
+}
+
+/* === Cabeçalho com faixa sutil em degradê Rymo === */
+.modal-header {
+  background: linear-gradient(180deg, rgba(15,119,224,0.08) 0%, rgba(15,119,224,0.00) 100%);
+  border-bottom: 1px solid rgba(15,119,224,0.12);
+  padding: 0.9rem 1rem;
+}
+
+/* Título mais compacto e elegante */
+.modal-title {
+  font-weight: 600;
+  letter-spacing: .2px;
+  color: #0f77e0;
+}
+
+/* === Corpo com respiração melhor === */
+.modal-body {
+  padding: 1rem 1rem 1.1rem;
+}
+
+/* === Rodapé mais leve === */
+.modal-footer {
+  border-top: 1px solid rgba(15,119,224,0.10);
+  padding: .8rem 1rem;
+}
+
+/* === Botão de fechar mais discreto === */
+.btn-close {
+  filter: contrast(0.8);
+}
+.btn-close:hover {
+  filter: none;
+}
+
+/* === Ajustes mobile === */
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: .75rem;
+  }
+  .modal-content {
+    border-radius: 12px;
+  }
+}
+
+.info-toggle {
+  animation: infoFade .18s ease-out;
+}
+@keyframes infoFade {
+  from { opacity: 0; transform: translateY(-2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+body,
+html {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 576px) {
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.45rem 0.75rem;
+    }
+
+    .form-control {
+        font-size: 0.85rem;
+    }
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
