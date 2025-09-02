@@ -69,6 +69,3 @@ r
 npm start
 O projeto estará disponível em:
 http://localhost:3000
-
-📄 Licença
-Este projeto é de uso interno da Rymo e não deve ser distribuído sem autorização.
